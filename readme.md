@@ -14,3 +14,6 @@
     C. [Place Vulnerable Enterprise Apps Behind the F5](#vulnf5)
 
 4. [Resources and Additional Reading](#resources)
+
+## Executive Summary <a name="execsum"></a>
+Log4j is a logging tool used in many Java-based applications
