@@ -23,4 +23,8 @@ Threat actors are exploiting this vulnerability in the wild on internet-facing s
 ## Identification of Vulnerable Endpoints and Services <a name="vulnend"></a>
 The biggest challenge is identifying vulnerable endpoints. Each department needs to contact their respective vendor(s) to determine if their applications and services are vulnerable.  To assist with identifying vulnerable services, Logpresso is a command-line tool for CVE-2021-44228 scanning.
 
-
+## Mitigations <a name="mits"></a>
+### A. Block at the Border <a name="borderblock"></a>
+Security Operations enabled snort rules at the border internet firewall to block inbound attempts to exploit this vulnerability.  These rules block inbound internet traffic on non-encrypted common web ports, such as HTTP.  These rules will not provide any protection for a site running HTTPS as the traffic cannot be intercepted and decrypted by the border internet firewall. Exploits for this vulnerability are quite specific, and the chance for false positives is very low.
+### B. Install CrowdStrike on Server Endpoints <a name="installcs"></a>
+Endpoint detection and response software is required on all endpoints per [Information Security Standard U7](https://cio.ubc.ca/information-security-standards/U7). Security Operations recommends installing the CrowdStrike Falcon sensor on all server endpoints, since the sensor provides visibility into vulnerable endpoints and prevents exploitation from threat actors. 
