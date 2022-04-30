@@ -20,6 +20,6 @@ Log4j is a logging tool used in many Java-based applications.  In December 2021,
 Threat actors are exploiting this vulnerability in the wild on internet-facing systems to deploy ransomware.  Patching vulnerable endpoints must be done in a timely manner.  The mitigations described below, buy a limited amount of time for teams to develop and test patching plans, but they are not long-term solutions.
 
 ## Identification of Vulnerable Endpoints and Services <a name="vulnend"></a>
-The biggest challenge is identifying vulnerable endpoints. Each department needs to contact their respective vendor(s) to determine if their applications and services are vulnerable.  To assist with identifying vulnerable services, Logpresso is a command-line tool for CVE-2021-44228 vulnerability scanning.
+The biggest challenge is identifying vulnerable endpoints. Each department needs to contact their respective vendor(s) to determine if their applications and services are vulnerable.  To assist with identifying vulnerable services, Logpresso is a command-line tool for CVE-2021-44228 scanning.
 
 
