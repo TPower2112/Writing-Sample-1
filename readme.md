@@ -33,9 +33,19 @@ The cybersecurity team understands that system owners may need time to work with
 
 ## Resources and Additional Reading <a name="resources"></a>
 [Apache Migration from Loj4j 1 to Log4j2](https://logging.apache.org/log4j/2.x/manual/migration.html)
-[Apache Security Vulnerability - Log4j](https://logging.apache.org/log4j/2.x/security.html)
-[CrowdStrike Log4j Learning Center](https://www.crowdstrike.com/log4j2/)
-[CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)
-[CVE-2021-44228-NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)
-[F5 and Log4j2 Vulnerability Mitigation](https://support.f5.com/csp/article/K59329043#:~:text=F5%20tested%20the%20iRule%20against,exploit%20attempts%20for%20this%20issue.)
 
+[Apache Security Vulnerability - Log4j](https://logging.apache.org/log4j/2.x/security.html)
+
+[CrowdStrike Log4j Learning Center](https://www.crowdstrike.com/log4j2/)
+
+[CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)
+
+[CVE-2021-44228-NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)
+
+[F5 and Log4j2 Vulnerability Mitigation](https://support.f5.com/csp/article/K59329043)
+
+[Logpresso Vulnerability Scanner](https://github.com/logpresso/CVE-2021-44228-Scanner)
+
+[Microsoft Security Response Center - Log4j2](https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/)
+
+[MSRC-Guidance for preventing, detecting, and hunting Log4j2](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/)
