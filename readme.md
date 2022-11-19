@@ -9,7 +9,7 @@
     
     A. [Block at the Border](#borderblock)
     
-    B. [Install CrowdStrike on Server Endpoints](#installcs)
+    B. [Install Endpoint Detection & Response (EDR) on Server Endpoints](#installcs)
     
     C. [Place Vulnerable Enterprise Apps Behind the F5](#vulnf5)
 
@@ -21,15 +21,16 @@ Log4j is a logging tool used in many Java-based applications.  In December 2021,
 Threat actors are exploiting this vulnerability in the wild on internet-facing systems to deploy ransomware.  Patching vulnerable endpoints must be done in a timely manner.  The mitigations described below, buy a limited amount of time for teams to develop and test patching plans, but they are not long-term solutions.
 
 ## Identification of Vulnerable Endpoints and Services <a name="vulnend"></a>
-The biggest challenge is identifying vulnerable endpoints. Each department needs to contact their respective vendor(s) to determine if their applications and services are vulnerable.  To assist with identifying vulnerable services, Logpresso is a command-line tool for CVE-2021-44228 scanning.
+The biggest challenge is identifying vulnerable endpoints. Each department needs to contact their respective vendor(s) to determine if their applications and services are vulnerable.  To assist with identifying vulnerable services, [Logpresso](https://github.com/logpresso/CVE-2021-44228-Scanner) is a command-line tool for CVE-2021-44228 scanning.
 
 ## Mitigations <a name="mits"></a>
 ### A. Block at the Border <a name="borderblock"></a>
-Security Operations enabled snort rules at the border internet firewall to block inbound attempts to exploit this vulnerability.  These rules block inbound internet traffic on non-encrypted common web ports, such as HTTP.  These rules will not provide any protection for a site running HTTPS as the traffic cannot be intercepted and decrypted by the border internet firewall. Exploits for this vulnerability are quite specific, and the chance for false positives is very low.
-### B. Install CrowdStrike on Server Endpoints <a name="installcs"></a>
-Endpoint detection and response software is required on all endpoints per [Information Security Standard U7](https://cio.ubc.ca/information-security-standards/U7). Security Operations recommends installing the CrowdStrike Falcon sensor on all server endpoints, since the sensor provides visibility into vulnerable endpoints and prevents exploitation from threat actors. In addition, the Falcon OverWatch Elite team hunts for exploitation events related to this vulnerability 24/7. They will notify and engage the cybersecurity team outside of working hours for any exploit attempts.
+Network administrators can enabled snort rules at the border internet firewall to block inbound attempts to exploit this vulnerability.  These rules block inbound internet traffic on non-encrypted common web ports, such as HTTP.  These rules will not provide any protection for a site running HTTPS as the traffic cannot be intercepted and decrypted by the border internet firewall. Exploits for this vulnerability are quite specific, and the chance for false positives is very low.
+### B. Install EDR on Server Endpoints <a name="installcs"></a>
+EDR software is required on all endpoints per [Information Security Standard U7](https://cio.ubc.ca/information-security-standards/U7). Security Operations recommends installing the EDR on all server endpoints first, since the sensor provides visibility into vulnerable endpoints and prevents exploitation from threat actors. 
+
 ### C. Place Vulnerable Enterprise Apps Behind the F5 <a name="vulnf5"></a>
-The cybersecurity team understands that system owners may need time to work with vendors to patch CVE-2021-44228. System owners with vulnerable services can contact the application security team to build a WAF(web application firewall) signature to protect web traffic between an application and the internet. The F5 monitors and filters malicious web traffic as the JNDI injection signatures related to this vulnerability.
+System owners may need time to work with vendors to patch CVE-2021-44228. System owners with vulnerable services can contact the application security team to build a WAF (web application firewall) signature to protect web traffic between an application and the internet. The F5 monitors and filters malicious web traffic as the JNDI injection signatures related to this vulnerability.
 
 ## Resources and Additional Reading <a name="resources"></a>
 [Apache Migration from Loj4j 1 to Log4j2](https://logging.apache.org/log4j/2.x/manual/migration.html)
